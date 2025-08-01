@@ -1,0 +1,346 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1{
+  text-align: center;
+}
+.contact {
+    display: flex;
+    gap: 60px;
+    margin-top: 20px;
+
+}
+
+.contact h1 a {
+    color: black;
+    z-index: -1;
+}
+header {
+  background-color: #140bcd;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.faq-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.faq-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ff8c00;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.faq-item {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item h2 {
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.faq-item p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+nav a {
+  color: white;
+  margin-left: 250px;
+  text-decoration: none;
+
+}
+main {
+  padding: 20px;
+}
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+#offres-spec {
+  background-color: #e0f0ff;
+  border: 1px solid #007bff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+#offres-spec ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#offres-spec li {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+#reservation {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+#reservation label {
+  font-weight: bold;
+}
+
+#reservation input,
+#reservation select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #020a01;
+  margin-bottom: 40px;
+}
+
+.fleet-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.vehicle-card {
+  background: white;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.vehicle-card h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  padding: 0 15px;
+  color: #555;
+}
+
+.vehicle-details i {
+  margin-right: 5px;
+  color: #f39c12;
+}
+
+.vehicle-features {
+  list-style: none;
+  padding: 15px 25px 25px;
+  margin: 0;
+}
+
+.vehicle-features li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.vehicle-features i {
+  color: #27ae60;
+  margin-right: 10px;
+}
+#reservation button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#reservation button:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}
+#liste-reservations {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#liste-reservations li {
+  margin-bottom: 6px;
+  color: #007bff;
+}
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #reservation input, #reservation select {
+    width: 100%;
+  }
+}
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease-out;
+}
+#avis {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 30px;
+}
+
+.avis-client {
+  margin-bottom: 20px;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+}
+#galerie {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
