@@ -1,20 +1,20 @@
 import './App.css'
 
 const skills = [
-  'React',
-  'JavaScript',
-  'Vite',
-  'HTML5',
-  'CSS3',
-  'UI/UX Design',
-  'Responsive Design',
-  'Git & GitHub',
+  { name: 'React', icon: '⚛️' },
+  { name: 'JavaScript', icon: '🟨' },
+  { name: 'Vite', icon: '⚡' },
+  { name: 'HTML5', icon: '🔷' },
+  { name: 'CSS3', icon: '🎨' },
+  { name: 'UI/UX', icon: '✨' },
+  { name: 'Responsive', icon: '📱' },
+  { name: 'GitHub', icon: '🐙' },
 ]
 
 const stats = [
-  { value: 'React', label: 'Main stack' },
-  { value: '100%', label: 'Responsive approach' },
-  { value: 'Open', label: 'Available for projects' },
+  { value: 'React', label: 'Main stack', icon: '⚛️' },
+  { value: '100%', label: 'Responsive approach', icon: '📱' },
+  { value: 'Open', label: 'Available for projects', icon: '🚀' },
 ]
 
 const projects = [
@@ -22,16 +22,19 @@ const projects = [
     title: 'Senkou7 Portfolio',
     text: 'A modern personal portfolio built with React and Vite to present my skills, selected work, and contact details.',
     tag: 'React + Vite',
+    icon: '💼',
   },
   {
     title: 'Responsive Interfaces',
     text: 'Clean, responsive interfaces designed to work smoothly across desktop, tablet, and mobile screens.',
     tag: 'Frontend',
+    icon: '📐',
   },
   {
     title: 'UI/UX Concepts',
     text: 'Simple and useful interface concepts that focus on clear content, visual hierarchy, and a comfortable user experience.',
     tag: 'UI/UX',
+    icon: '🎯',
   },
 ]
 
@@ -78,9 +81,9 @@ export default function App() {
             </div>
 
             <ul className="mini-list">
-              <li>Available for freelance</li>
-              <li>React & Vite</li>
-              <li>Mobile-first</li>
+              <li>📍 Available for freelance</li>
+              <li>⚛️ React & Vite</li>
+              <li>📱 Mobile-first</li>
             </ul>
           </div>
 
@@ -89,9 +92,9 @@ export default function App() {
             <h3>Abdennour Amlaki</h3>
             <p>Frontend Developer & UI enthusiast</p>
             <div className="pill-row">
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>UI/UX</span>
+              <span>⚛️ React</span>
+              <span>🟨 JS</span>
+              <span>🎨 UI/UX</span>
             </div>
           </div>
         </section>
@@ -99,6 +102,7 @@ export default function App() {
         <section className="stats-grid" aria-label="Portfolio highlights">
           {stats.map((stat) => (
             <div key={stat.label} className="stat-box">
+              <div className="stat-icon">{stat.icon}</div>
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </div>
@@ -133,8 +137,9 @@ export default function App() {
 
           <div className="tags">
             {skills.map((skill) => (
-              <span key={skill} className="tag">
-                {skill}
+              <span key={skill.name} className="tag">
+                <span className="tag-icon">{skill.icon}</span>
+                {skill.name}
               </span>
             ))}
           </div>
@@ -149,6 +154,7 @@ export default function App() {
           <div className="project-grid">
             {projects.map((project) => (
               <article key={project.title} className="project-card">
+                <div className="project-icon">{project.icon}</div>
                 <span className="project-tag">{project.tag}</span>
                 <h3>{project.title}</h3>
                 <p>{project.text}</p>
