@@ -4,33 +4,34 @@ const skills = [
   'React',
   'JavaScript',
   'Vite',
-  'UI/UX',
   'HTML5',
   'CSS3',
+  'UI/UX Design',
   'Responsive Design',
+  'Git & GitHub',
 ]
 
 const stats = [
-  { value: '2+', label: 'Years of learning' },
-  { value: '8+', label: 'Projects built' },
-  { value: '100%', label: 'Focus on UX' },
+  { value: 'React', label: 'Main stack' },
+  { value: '100%', label: 'Responsive approach' },
+  { value: 'Open', label: 'Available for projects' },
 ]
 
 const projects = [
   {
-    title: 'Portfolio Showcase',
-    text: 'A clean personal portfolio designed to highlight projects, experience, and contact information.',
+    title: 'Senkou7 Portfolio',
+    text: 'A modern personal portfolio built with React and Vite to present my skills, selected work, and contact details.',
+    tag: 'React + Vite',
+  },
+  {
+    title: 'Responsive Interfaces',
+    text: 'Clean, responsive interfaces designed to work smoothly across desktop, tablet, and mobile screens.',
+    tag: 'Frontend',
+  },
+  {
+    title: 'UI/UX Concepts',
+    text: 'Simple and useful interface concepts that focus on clear content, visual hierarchy, and a comfortable user experience.',
     tag: 'UI/UX',
-  },
-  {
-    title: 'Landing Page',
-    text: 'A modern landing page built for product promotion with strong calls to action and visual hierarchy.',
-    tag: 'Marketing',
-  },
-  {
-    title: 'Dashboard Mockup',
-    text: 'A sleek dashboard concept focused on readability, metrics, and productivity-friendly design.',
-    tag: 'Dashboard',
   },
 ]
 
@@ -38,61 +39,64 @@ export default function App() {
   return (
     <div className="page-shell">
       <header className="topbar">
-        <div className="brand">Senkou7</div>
+        <a className="brand" href="#top" aria-label="Senkou7 home">
+          Senkou7
+        </a>
 
-        <nav className="nav">
+        <nav className="nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="btn btn-primary" href="#contact">
+        <a className="btn btn-primary" href="mailto:abdennouramlaki@gmail.com">
           Let’s talk
         </a>
       </header>
 
-      <main className="container">
+      <main id="top" className="container">
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow">Frontend Developer</p>
+            <p className="eyebrow">Frontend Developer · Morocco</p>
             <h1>
               Hi, I’m <span>Abdennour Amlaki</span>
             </h1>
             <p className="lead">
-              I design and build modern web experiences with a strong focus on
-              clean interfaces, user experience, and performance.
+              I build modern, responsive websites with React, JavaScript, and a
+              strong eye for clean UI/UX. I turn ideas into fast and useful web
+              experiences.
             </p>
 
             <div className="cta-row">
               <a className="btn btn-primary" href="#projects">
-                View projects
+                View my work
               </a>
-              <a className="btn btn-secondary" href="#about">
-                About me
+              <a className="btn btn-secondary" href="mailto:abdennouramlaki@gmail.com">
+                Start a project
               </a>
             </div>
 
             <ul className="mini-list">
-              <li>Responsive layouts</li>
-              <li>UI/UX focused</li>
+              <li>Available for freelance</li>
               <li>React & Vite</li>
+              <li>Mobile-first</li>
             </ul>
           </div>
 
           <div className="hero-card">
             <div className="avatar">AA</div>
             <h3>Abdennour Amlaki</h3>
-            <p>Frontend Developer</p>
+            <p>Frontend Developer & UI enthusiast</p>
             <div className="pill-row">
               <span>React</span>
               <span>JavaScript</span>
-              <span>CSS</span>
+              <span>UI/UX</span>
             </div>
           </div>
         </section>
 
-        <section className="stats-grid">
+        <section className="stats-grid" aria-label="Portfolio highlights">
           {stats.map((stat) => (
             <div key={stat.label} className="stat-box">
               <strong>{stat.value}</strong>
@@ -103,28 +107,28 @@ export default function App() {
 
         <section id="about" className="content-section">
           <div className="section-heading">
-            <p className="eyebrow">About</p>
-            <h2>Building simple, thoughtful digital experiences.</h2>
+            <p className="eyebrow">About me</p>
+            <h2>Designing with purpose, coding with care.</h2>
           </div>
 
           <div className="about-grid">
             <p>
-              I’m a frontend developer passionate about turning ideas into clean,
-              responsive, and engaging user interfaces. I enjoy working on design
-              systems, landing pages, and polished web apps that feel modern and
-              easy to use.
+              I’m Abdennour, a frontend developer from Morocco. I enjoy creating
+              polished interfaces that are easy to understand, pleasant to use,
+              and ready for every screen size.
             </p>
             <p>
-              My goal is to combine strong visual design with practical usability,
-              so every project feels both beautiful and effective.
+              My approach combines thoughtful design, reusable React components,
+              and clean code. I’m always learning and looking for better ways to
+              turn a concept into a real digital product.
             </p>
           </div>
         </section>
 
         <section id="skills" className="content-section">
           <div className="section-heading">
-            <p className="eyebrow">Skills</p>
-            <h2>What I work with.</h2>
+            <p className="eyebrow">My toolkit</p>
+            <h2>Technologies I use.</h2>
           </div>
 
           <div className="tags">
@@ -138,8 +142,8 @@ export default function App() {
 
         <section id="projects" className="content-section">
           <div className="section-heading">
-            <p className="eyebrow">Projects</p>
-            <h2>Selected work.</h2>
+            <p className="eyebrow">Selected work</p>
+            <h2>Projects made with attention to detail.</h2>
           </div>
 
           <div className="project-grid">
@@ -155,12 +159,12 @@ export default function App() {
 
         <section id="contact" className="content-section contact-box">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Let’s create something great together.</h2>
+            <p className="eyebrow">Have an idea?</p>
+            <h2>Let’s build something useful together.</h2>
           </div>
 
           <a className="btn btn-primary" href="mailto:abdennouramlaki@gmail.com">
-            abdennouramlaki@gmail.com
+            Contact me
           </a>
         </section>
       </main>
